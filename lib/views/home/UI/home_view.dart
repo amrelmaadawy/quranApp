@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quranapp/views/home/UI/widgets/home_appbar.dart';
-import 'package:quranapp/views/home/logic/prayers.dart';
-
+import 'package:quranapp/views/home/UI/widgets/prayer_card.dart';
+import 'package:quranapp/views/home/UI/widgets/prayers_row.dart';
+import 'package:quranapp/views/home/UI/widgets/worships_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -16,31 +17,11 @@ class HomeView extends StatelessWidget {
             children: [
               HomeAppBar(),
               SizedBox(height: 20),
-              SizedBox(
-                height: 70,
-                width: double.infinity,
-                child: ListView.separated(
-                  separatorBuilder: (context, index) => SizedBox(width: 35),
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(child: prayers[index].icon),
-                          Text(prayers[index].name),
-                          Text(prayers[index].time),
-                        ],
-                      ),
-                    );
-                  },
-                  itemCount: prayers.length,
-                  scrollDirection: Axis.horizontal,
-                ),
-              ),
+              PrayersRow(),
+              SizedBox(height: 30),
+              PrayerCard(),
+              SizedBox(height: 20),
+              WorshipsCard(),
             ],
           ),
         ),
