@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:quranapp/core/app_color.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({
@@ -17,12 +18,12 @@ class HomeAppBar extends StatelessWidget {
               ' المكان ',
               style: TextStyle(
                 color: Colors.grey.shade700,
-                fontSize: 12,
+                fontSize: 15,
               ),
             ),
             Text(
-              'القاهره مصر',
-              style: TextStyle(color: Colors.black, fontSize: 18),
+              'القاهره, مصر',
+              style: TextStyle(color: AppColor.kprimryColor, fontSize: 20),
             ),
           ],
         ),
@@ -34,12 +35,12 @@ class HomeAppBar extends StatelessWidget {
               '2025 الثلاثاء ديسمبر',
               style: TextStyle(
                 color: Colors.grey.shade700,
-                fontSize: 12,
+                fontSize: 13,
               ),
             ),
             Text(
               '1445  الاحد ربيع الاول',
-              style: TextStyle(color: Colors.black, fontSize: 15),
+              style: TextStyle(color:AppColor.kprimryColor, fontSize: 18),
             ),
           ],
         ),

@@ -12,9 +12,9 @@ class MainHomeView extends StatefulWidget {
 }
 
 class _MainHomeViewState extends State<MainHomeView> {
-      int currentIndex = 0;
+  int currentIndex = 2;
 
-  List<Widget> pages = [HomeView(), Setting(), PrayersTime()];
+  List<Widget> pages = [Setting(), PrayersTime(), HomeView()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,16 +31,17 @@ class _MainHomeViewState extends State<MainHomeView> {
 
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.mosque),
-            label: 'الصفحه الرئيسيه',
+            icon: Icon(Icons.settings),
+            label: 'الاعددات',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.alarm),
             label: 'مواقيت الصلاة',
           ),
+
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'الاعددات',
+            icon: Icon(Icons.mosque),
+            label: 'الصفحه الرئيسيه',
           ),
         ],
       ),
