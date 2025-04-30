@@ -7,7 +7,6 @@ import 'package:quranapp/views/home/UI/widgets/worships_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
