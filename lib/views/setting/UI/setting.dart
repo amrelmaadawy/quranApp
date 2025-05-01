@@ -23,9 +23,19 @@ class Setting extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 10),
-                Icon(Icons.settings, color: AppColor.kprimryColor, size: 32),
-                Text('Test'),
+                Icon(
+                  Icons.settings_outlined,
+                  color: AppColor.kprimryColor,
+                  size: 32,
+                ),
               ],
+            ),
+
+            Center(
+              child: Text(
+                'لا يوجد اعدادات متاحه حاليا',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              ),
             ),
           ],
         ),
