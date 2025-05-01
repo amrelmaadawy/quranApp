@@ -33,6 +33,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.2.1
+  islamic_hijri_calendar: ^0.0.4
 
 dev_dependencies:
   flutter_lints: ^5.0.0
@@ -69,7 +70,6 @@ flutter:
         - asset: assets/fonts/Amiri-BoldItalic.ttf
         - asset: assets/fonts/Amiri-Italic.ttf
         - asset: assets/fonts/Amiri-Regular.ttf
-
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
