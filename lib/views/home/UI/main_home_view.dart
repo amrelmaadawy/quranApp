@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quranapp/core/app_color.dart';
+import 'package:quranapp/core/get_data.dart';
 import 'package:quranapp/views/home/UI/home_view.dart';
 import 'package:quranapp/views/prayerstime/UI/prayers_time.dart';
 import 'package:quranapp/views/setting/UI/setting.dart';
@@ -13,6 +14,15 @@ class MainHomeView extends StatefulWidget {
 
 class _MainHomeViewState extends State<MainHomeView> {
   int currentIndex = 2;
+
+  @override
+  void initState() {
+    setState(() {
+      GetData.getData();
+    });
+
+    super.initState();
+  }
 
   List<Widget> pages = [Setting(), PrayersTime(), HomeView()];
   @override

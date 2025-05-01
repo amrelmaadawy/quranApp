@@ -14,7 +14,10 @@ class Tasbeeh  extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.end,
-              children: [CustomAppBar(title: 'التسبيح'), ],
+              children: [
+              CustomAppBar(title: 'التسبيح'),
+              
+              ],
             ),
           ),
         ),

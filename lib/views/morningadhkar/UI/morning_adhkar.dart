@@ -4,9 +4,9 @@ import 'package:quranapp/core/components/custom_appbar_worships.dart';
 
 class MorningAdhkar extends StatelessWidget {
   const MorningAdhkar({super.key});
-
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
