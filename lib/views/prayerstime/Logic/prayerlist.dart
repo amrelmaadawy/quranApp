@@ -19,7 +19,7 @@ List<Prayers> prayers = [
     ),
     time: '5',
   ),
- Prayers(
+  Prayers(
     name: 'الظهر',
     icon: Image.asset(
       'assets/images/dhur1.png',
@@ -35,7 +35,7 @@ List<Prayers> prayers = [
     ),
     time: '5',
   ),
- 
+
   Prayers(
     name: 'المغرب',
     icon: Image.asset(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quranapp/core/components/adhkar_list_view.dart';
+import 'package:quranapp/core/components/adhkar_card.dart';
 import 'package:quranapp/core/components/custom_appbar_worships.dart';
 
 class AllDuas extends StatelessWidget {
@@ -17,7 +17,14 @@ class AllDuas extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 CustomAppBar(title: 'جميع الادعيه'),
-                AdhkarListView(),
+                ListView.builder(
+                  itemBuilder:
+                      (context, index) =>
+                          AdhkarCard(alzekr: '', descrption: ''),
+                  itemCount: 10,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                ),
               ],
             ),
           ),

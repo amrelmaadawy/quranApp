@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:quranapp/views/allduas/UI/allduas.dart';
-import 'package:quranapp/views/eveningadhkar/UI/evening_adhkar.dart';
+import 'package:quranapp/views/eveningadhkar/UI/morning_evening_adhkar.dart';
 import 'package:quranapp/views/favorite/UI/favorite.dart';
 import 'package:quranapp/views/hijricalendar/UI/hijri_calendar.dart';
 import 'package:quranapp/views/home/logic/worships.dart';
 import 'package:quranapp/views/miscellaneous_adhkar/UI/miscellaneous_adhkar.dart';
-import 'package:quranapp/views/morningadhkar/UI/morning_adhkar.dart';
 import 'package:quranapp/views/prayeradhkar/UI/prayer_adhkar.dart';
 import 'package:quranapp/views/tasbeeh/UI/tasbeeh.dart';
 
@@ -31,14 +30,7 @@ class AllWorshipsList extends StatelessWidget {
                     ),
                   );
                   break;
-                case 1:
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MorningAdhkar(),
-                    ),
-                  );
-                  break;
+
                 case 2:
                   Navigator.push(
                     context,
@@ -50,17 +42,13 @@ class AllWorshipsList extends StatelessWidget {
                 case 3:
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                      builder: (context) => const AllDuas(),
-                    ),
+                    MaterialPageRoute(builder: (context) => const AllDuas()),
                   );
                   break;
                 case 4:
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                      builder: (context) => const Tasbeeh(),
-                    ),
+                    MaterialPageRoute(builder: (context) => const Tasbeeh()),
                   );
                   break;
                 case 5:
@@ -74,9 +62,7 @@ class AllWorshipsList extends StatelessWidget {
                 case 6:
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                      builder: (context) => const Favorite(),
-                    ),
+                    MaterialPageRoute(builder: (context) => const Favorite()),
                   );
                   break;
                 case 7:
@@ -91,7 +77,7 @@ class AllWorshipsList extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const MiscellaneousAdhkar (),
+                      builder: (context) => const MiscellaneousAdhkar(),
                     ),
                   );
                   break;

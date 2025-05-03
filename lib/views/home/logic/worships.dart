@@ -5,7 +5,7 @@ class Worships {
   final Widget text;
   final Widget icon;
   final int id;
-  Worships({required this.text, required this.icon,required this.id});
+  Worships({required this.text, required this.icon, required this.id});
 }
 
 List<Worships> worships = [

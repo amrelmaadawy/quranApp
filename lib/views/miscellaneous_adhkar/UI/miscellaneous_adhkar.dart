@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:quranapp/core/components/adhkar_list_view.dart';
+import 'package:quranapp/core/components/adhkar_card.dart';
 import 'package:quranapp/core/components/custom_appbar_worships.dart';
 
-class MiscellaneousAdhkar  extends StatelessWidget {
-  const MiscellaneousAdhkar ({super.key});
+class MiscellaneousAdhkar extends StatelessWidget {
+  const MiscellaneousAdhkar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,17 @@ class MiscellaneousAdhkar  extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.end,
-              children: [CustomAppBar(title: 'أذكار متنوعه'), AdhkarListView()],
+              children: [
+                CustomAppBar(title: 'أذكار متنوعه'),
+                ListView.builder(
+                  itemBuilder:
+                      (context, index) =>
+                          AdhkarCard(alzekr: '', descrption: ''),
+                  itemCount: 10,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                ),
+              ],
             ),
           ),
         ),

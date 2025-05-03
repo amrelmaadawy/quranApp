@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quranapp/core/app_color.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key ,required this.title});
+  const CustomAppBar({super.key, required this.title});
   final String title;
 
   @override

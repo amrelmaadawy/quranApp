@@ -6,10 +6,9 @@ import 'package:quranapp/views/prayerstime/UI/widget/prayers_time_appbar.dart';
 
 class PrayersTime extends StatelessWidget {
   const PrayersTime({super.key});
- 
+
   @override
   Widget build(BuildContext context) {
-    
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(16.0),

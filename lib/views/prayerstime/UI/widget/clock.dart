@@ -1,12 +1,9 @@
-
 import 'package:analog_clock/analog_clock.dart';
 import 'package:flutter/material.dart';
 import 'package:quranapp/core/app_color.dart';
 
 class Clock extends StatelessWidget {
-  const Clock({
-    super.key,
-  });
+  const Clock({super.key});
 
   @override
   Widget build(BuildContext context) {

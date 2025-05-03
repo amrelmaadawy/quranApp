@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quranapp/core/app_color.dart';
 
 class AdhkarCard extends StatelessWidget {
-  const AdhkarCard({super.key,required this.alzekr,required this.descrption});
+  const AdhkarCard({super.key, required this.alzekr, required this.descrption});
   final String alzekr;
   final String descrption;
   @override

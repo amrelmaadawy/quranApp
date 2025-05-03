@@ -1,15 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
+import 'package:quranapp/core/model/adhkar/adhkar.dart';
 
-class GetData {
-  static List<dynamic> allData = [];
-  static Future<void> getData() async {
-    final String response = await rootBundle.loadString(
-      'Adhkar-json/adhkar.json',
-    );
-    final data = await json.decode(response);
-    allData = data['data'];
-  
+class GetAdhkar {
+  static Future<List<Adhkar>> getAdhkar() async {
+    final response = await rootBundle.loadString('Adhkar-json/adhkar.json');
+    final data = json.decode(response) as List<dynamic>;
+    return data.map((e) => Adhkar.fromJson(e)).toList();
   }
 }
