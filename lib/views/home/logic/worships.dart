@@ -12,7 +12,20 @@ List<Worships> worships = [
   Worships(
     id: 0,
     text: Text(
-      'اذكار المساء',
+      'اذكار الصباح',
+      style: TextStyle(
+        fontSize: 18,
+        color: AppColor.kprimryColor,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    icon: Image.asset('assets/images/azkarelsaba7.png'),
+  ),
+
+  Worships(
+    id: 2,
+    text: Text(
+      'اذكار قبل النوم',
       style: TextStyle(
         fontSize: 18,
         color: AppColor.kprimryColor,
@@ -20,31 +33,6 @@ List<Worships> worships = [
       ),
     ),
     icon: Image.asset('assets/images/azkarelmassa.png'),
-  ),
-  Worships(
-    id: 1,
-    text: Text(
-      'اذكار الصباح',
-      style: TextStyle(
-        fontSize: 18,
-        color: AppColor.kprimryColor,
-
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    icon: Image.asset('assets/images/azkarelsaba7.png'),
-  ),
-  Worships(
-    id: 2,
-    text: Text(
-      'اذكار الصلاة',
-      style: TextStyle(
-        fontSize: 18,
-        color: AppColor.kprimryColor,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    icon: Image.asset('assets/images/azkarelprayers.png'),
   ),
   Worships(
     id: 3,
@@ -58,18 +46,7 @@ List<Worships> worships = [
     ),
     icon: Image.asset('assets/images/doaa.png'),
   ),
-  Worships(
-    id: 4,
-    text: Text(
-      'التسبيح ',
-      style: TextStyle(
-        fontSize: 18,
-        color: AppColor.kprimryColor,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    icon: Image.asset('assets/images/tasbee7.png'),
-  ),
+  
   Worships(
     id: 5,
     text: Text(
@@ -94,18 +71,7 @@ List<Worships> worships = [
     ),
     icon: Image.asset('assets/images/favorite.png'),
   ),
-  Worships(
-    id: 7,
-    text: Text(
-      'اقرب مسجد  ',
-      style: TextStyle(
-        fontSize: 18,
-        color: AppColor.kprimryColor,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    icon: Image.asset('assets/images/mosque.png'),
-  ),
+  
   Worships(
     id: 8,
     text: Text(
