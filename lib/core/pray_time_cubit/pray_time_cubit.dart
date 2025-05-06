@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
+import 'package:intl/intl.dart';
 import 'package:quranapp/core/Services/dio_services.dart';
 import 'package:quranapp/core/model/prayers_time/timings.dart';
 
@@ -24,11 +25,26 @@ class PrayTimeCubit extends Cubit<PrayTimeState> {
       // Verify response data structure
 
       timings.add(Timings.fromJson(response.data['data']['timings']));
-      print(timings[0].isha);
+    
       emit(GetPrayTimeSuccess());
     } catch (e) {
       emit(GetPrayTimeFailed());
-      print(e);
+      if (kDebugMode) {
+        print(e);
+      }
     }
   }
+
+
+String formatTimeTo12Hour(String? time24) {
+  if (time24 == null) return "N/A";
+  
+  try {
+    final dateFormat = DateFormat("HH:mm");
+    final dateTime = dateFormat.parse(time24);
+    return DateFormat("h:mm a").format(dateTime); // e.g., "5:30 AM"
+  } catch (e) {
+    return time24; // Fallback if parsing fails
+  }
+}
 }

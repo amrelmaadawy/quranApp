@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quranapp/core/app_color.dart';
 import 'package:quranapp/views/home/logic/prayers.dart';
-
 List<Prayers> prayers = [
   Prayers(
     name: 'الفجر',

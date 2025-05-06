@@ -24,7 +24,7 @@ class PrayersRow extends StatelessWidget {
                 'assets/images/isha.png',
                 color: AppColor.kunselectedicon,
               ),
-              time: state is GetPrayTimeLoading?'': prayTimeCubit.timings[0].isha!,
+              time: state is GetPrayTimeLoading?'': prayTimeCubit.formatTimeTo12Hour(prayTimeCubit.timings[0].isha!),
             ),
             Prayers(
               name: 'المغرب',
@@ -32,7 +32,7 @@ class PrayersRow extends StatelessWidget {
                 'assets/images/maghrib.png',
                 color: AppColor.kunselectedicon,
               ),
-              time: state is GetPrayTimeLoading?'': prayTimeCubit.timings[0].maghrib!,
+              time: state is GetPrayTimeLoading?'': prayTimeCubit.formatTimeTo12Hour(prayTimeCubit.timings[0].maghrib!),
             ),
             Prayers(
               name: 'العصر',
@@ -40,7 +40,7 @@ class PrayersRow extends StatelessWidget {
                 'assets/images/elasr.png',
                 color: AppColor.kunselectedicon,
               ),
-              time: state is GetPrayTimeLoading?'': prayTimeCubit.timings[0].asr!,
+              time: state is GetPrayTimeLoading?'': prayTimeCubit.formatTimeTo12Hour(prayTimeCubit.timings[0].asr!),
             ),
             Prayers(
               name: 'الظهر',
@@ -48,7 +48,7 @@ class PrayersRow extends StatelessWidget {
                 'assets/images/dhur1.png',
                 color: AppColor.kunselectedicon,
               ),
-              time: state is GetPrayTimeLoading?'': prayTimeCubit.timings[0].dhuhr!,
+              time: state is GetPrayTimeLoading?'':prayTimeCubit.formatTimeTo12Hour(prayTimeCubit.timings[0].dhuhr!),
             ),
             Prayers(
               name: 'الشروق',
@@ -56,7 +56,7 @@ class PrayersRow extends StatelessWidget {
                 'assets/images/sunrise.png',
                 color: AppColor.kunselectedicon,
               ),
-              time: state is GetPrayTimeLoading?'': prayTimeCubit.timings[0].sunrise!,
+              time: state is GetPrayTimeLoading?'': prayTimeCubit.formatTimeTo12Hour(prayTimeCubit.timings[0].sunrise!),
             ),
             Prayers(
               name: 'الفجر',
@@ -64,7 +64,7 @@ class PrayersRow extends StatelessWidget {
                 'assets/images/fajr.png',
                 color: AppColor.kunselectedicon,
               ),
-              time: state is GetPrayTimeLoading?'': prayTimeCubit.timings[0].fajr!,
+              time: state is GetPrayTimeLoading?'': prayTimeCubit.formatTimeTo12Hour(prayTimeCubit.timings[0].fajr!),
             ),
           ];
           return SizedBox(
