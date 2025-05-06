@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:quranapp/core/components/adhkar_card.dart';
 import 'package:quranapp/core/components/custom_appbar_worships.dart';
@@ -13,15 +12,12 @@ class EveningAdhkar extends StatefulWidget {
 }
 
 class _EveningAdhkarState extends State<EveningAdhkar> {
-
-
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: FutureBuilder(
-          future:GetAdhkar.getAdhkar(),
+          future: GetAdhkar.getAdhkar(),
           builder: (context, snapshot) {
             if (snapshot.hasError) {
               return SnackBar(content: Text('Error'));
@@ -34,7 +30,7 @@ class _EveningAdhkarState extends State<EveningAdhkar> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      CustomAppBar(title: items[0].category??''),
+                      CustomAppBar(title: items[0].category ?? ''),
                       ListView.builder(
                         itemBuilder: (context, index) {
                           return AdhkarCard(

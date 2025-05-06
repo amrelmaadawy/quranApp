@@ -14,7 +14,7 @@ class AllWorshipsList extends StatelessWidget {
     return Wrap(
       spacing: 30,
       runSpacing: 10,
-      alignment: WrapAlignment.spaceEvenly, 
+      alignment: WrapAlignment.spaceEvenly,
       children: [
         for (var worship in worships)
           GestureDetector(
@@ -37,8 +37,7 @@ class AllWorshipsList extends StatelessWidget {
                     ),
                   );
                   break;
-               
-                
+
                 case 5:
                   Navigator.push(
                     context,
@@ -53,7 +52,7 @@ class AllWorshipsList extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const Favorite()),
                   );
                   break;
-                
+
                 case 8:
                   Navigator.push(
                     context,
