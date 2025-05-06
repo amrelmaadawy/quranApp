@@ -34,19 +34,7 @@ List<Worships> worships = [
     ),
     icon: Image.asset('assets/images/azkarelmassa.png'),
   ),
-  Worships(
-    id: 3,
-    text: Text(
-      'جميع الادعيه ',
-      style: TextStyle(
-        fontSize: 18,
-        color: AppColor.kprimryColor,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    icon: Image.asset('assets/images/doaa.png'),
-  ),
-  
+
   Worships(
     id: 5,
     text: Text(
@@ -71,7 +59,7 @@ List<Worships> worships = [
     ),
     icon: Image.asset('assets/images/favorite.png'),
   ),
-  
+
   Worships(
     id: 8,
     text: Text(

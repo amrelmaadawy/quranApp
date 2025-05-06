@@ -17,7 +17,7 @@ class HijriCalendar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                CustomAppBar(title: ' التقويم الهجري و الميلادي'),
+                CustomAppBar(title: 'التقويم'),
 
                 Calender(),
               ],

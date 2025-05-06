@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quranapp/views/allduas/UI/allduas.dart';
 import 'package:quranapp/views/eveningadhkar/UI/morning_evening_adhkar.dart';
 import 'package:quranapp/views/favorite/UI/favorite.dart';
 import 'package:quranapp/views/hijricalendar/UI/hijri_calendar.dart';
@@ -15,7 +14,7 @@ class AllWorshipsList extends StatelessWidget {
     return Wrap(
       spacing: 30,
       runSpacing: 10,
-      alignment: WrapAlignment.spaceEvenly, // Distribute space evenly
+      alignment: WrapAlignment.spaceEvenly, 
       children: [
         for (var worship in worships)
           GestureDetector(
@@ -38,12 +37,7 @@ class AllWorshipsList extends StatelessWidget {
                     ),
                   );
                   break;
-                case 3:
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const AllDuas()),
-                  );
-                  break;
+               
                 
                 case 5:
                   Navigator.push(

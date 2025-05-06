@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quranapp/views/home/UI/main_home_view.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(fontFamily: "Amiri"),
-
       debugShowCheckedModeBanner: false,
       home: MainHomeView(),
     );
