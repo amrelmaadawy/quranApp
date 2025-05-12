@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quranapp/core/pray_time_cubit/pray_time_cubit.dart';
 import 'package:quranapp/views/home/UI/widgets/all_worships_list.dart';
 import 'package:quranapp/views/home/UI/widgets/home_appbar.dart';
 import 'package:quranapp/views/home/UI/widgets/prayer_card.dart';
@@ -10,22 +12,25 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                HomeAppBar(),
-                SizedBox(height: 20),
-                PrayersRow(),
-                SizedBox(height: 30),
-                PrayerCard(),
-                SizedBox(height: 20),
-                WorshipsCard(),
-                SizedBox(height: 30),
-                AllWorshipsList(),
-              ],
+      body: BlocProvider(
+        create: (context) => PrayTimeCubit()..getPrayTime(),
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  HomeAppBar(),
+                  SizedBox(height: 20),
+                  PrayersRow(),
+                  SizedBox(height: 30),
+                  PrayerCard(),
+                  SizedBox(height: 20),
+                  WorshipsCard(),
+                  SizedBox(height: 30),
+                  AllWorshipsList(),
+                ],
+              ),
             ),
           ),
         ),

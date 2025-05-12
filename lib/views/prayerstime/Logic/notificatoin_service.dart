@@ -14,9 +14,9 @@ class NotificationService {
     );
 
     tz.initializeTimeZones();
-  // if (await Permission.notification.isDenied) {
-  //     await Permission.notification.request();
-  //   }
+    // if (await Permission.notification.isDenied) {
+    //     await Permission.notification.request();
+    //   }
   }
 
   static Future<void> schiduleNotification(
@@ -30,7 +30,7 @@ class NotificationService {
       'Alarm Notifications',
       importance: Importance.max,
       priority: Priority.high,
-       playSound: true,
+      playSound: true,
       sound: RawResourceAndroidNotificationSound(
         'alarm',
       ), // Custom sound for Android
@@ -58,5 +58,4 @@ class NotificationService {
       notificationId,
     ); // Cancel the notification if needed
   }
-
 }
