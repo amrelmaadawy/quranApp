@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:quranapp/core/components/adhkar_card.dart';
 import 'package:quranapp/core/components/custom_appbar_worships.dart';
 
-class Favorite extends StatelessWidget {
-  const Favorite({super.key});
+class Hadiths extends StatelessWidget {
+  const Hadiths({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class Favorite extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                CustomAppBar(title: 'المفضله'),
+                CustomAppBar(title: 'الاحاديث'),
                 ListView.builder(
                   itemBuilder:
                       (context, index) =>

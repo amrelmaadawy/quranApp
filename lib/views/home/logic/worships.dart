@@ -50,14 +50,19 @@ List<Worships> worships = [
   Worships(
     id: 6,
     text: Text(
-      'المفضله ',
+      'الاحاديث ',
       style: TextStyle(
         fontSize: 18,
         color: AppColor.kprimryColor,
         fontWeight: FontWeight.bold,
       ),
     ),
-    icon: Image.asset('assets/images/favorite.png'),
+    icon: Image.asset(
+      'assets/images/Hadith1.png',
+      color: AppColor.kprimryColor,
+      width: 50,
+      height: 50,
+    ),
   ),
 
   Worships(
