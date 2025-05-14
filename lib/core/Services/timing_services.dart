@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 
-class DioServises {
+class TimingServises {
   final Dio _dio = Dio(
     BaseOptions(baseUrl: "https://api.aladhan.com/v1/timingsByCity/"),
   );

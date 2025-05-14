@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:intl/intl.dart';
-import 'package:quranapp/core/Services/dio_services.dart';
+import 'package:quranapp/core/Services/timing_services.dart';
 import 'package:quranapp/core/model/prayers_time/gregorian.dart';
 import 'package:quranapp/core/model/prayers_time/hijri.dart';
 import 'package:quranapp/core/model/prayers_time/timings.dart';
@@ -11,7 +11,7 @@ part 'pray_time_state.dart';
 
 class PrayTimeCubit extends Cubit<PrayTimeState> {
   PrayTimeCubit() : super(PrayTimeInitial());
-  final DioServises _dioServises = DioServises();
+  final TimingServises _dioServises = TimingServises();
   List<Timings> timings = [];
   List<Hijri> hijri = [];
   List<Gregorian> gregorian = [];
@@ -183,5 +183,4 @@ class PrayTimeCubit extends Cubit<PrayTimeState> {
     'November': 'نوفمبر',
     'December': 'ديسمبر',
   };
- 
 }

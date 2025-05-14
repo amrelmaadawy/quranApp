@@ -18,7 +18,7 @@ class _PrayerCardState extends State<PrayerCard> {
         final cubit = context.read<PrayTimeCubit>();
         final currentPrayer = cubit.getCurrentPrayerInfo();
         final nextPrayer = cubit.getNextPrayerInfo();
-    
+
         return Stack(
           children: [
             Container(
@@ -67,9 +67,7 @@ class _PrayerCardState extends State<PrayerCard> {
               bottom: 25,
               left: 10,
               child: Text(
-                nextPrayer['time']!.isNotEmpty
-                    ? nextPrayer['time']!
-                    : '--:--',
+                nextPrayer['time']!.isNotEmpty ? nextPrayer['time']! : '--:--',
                 style: TextStyle(
                   fontSize: 25,
                   color: AppColor.kTextColor,

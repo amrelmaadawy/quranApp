@@ -13,8 +13,6 @@ class MainHomeView extends StatefulWidget {
 
 class _MainHomeViewState extends State<MainHomeView> {
   int currentIndex = 2;
-  
-  
 
   List<Widget> pages = [Setting(), PrayersTime(), HomeView()];
   @override
