@@ -4,6 +4,7 @@ import 'package:quranapp/views/hadiths/UI/hadiths.dart';
 import 'package:quranapp/views/hijricalendar/UI/hijri_calendar.dart';
 import 'package:quranapp/views/home/logic/worships.dart';
 import 'package:quranapp/views/miscellaneous_adhkar/UI/miscellaneous_adhkar.dart';
+import 'package:quranapp/views/quran/UI/quran_view.dart';
 import 'package:quranapp/views/sleep_adhkar/UI/sleep_adhkar.dart';
 
 class AllWorshipsList extends StatelessWidget {
@@ -37,7 +38,14 @@ class AllWorshipsList extends StatelessWidget {
                     ),
                   );
                   break;
-
+                case 8:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MiscellaneousAdhkar(),
+                    ),
+                  );
+                  break;
                 case 5:
                   Navigator.push(
                     context,
@@ -52,13 +60,10 @@ class AllWorshipsList extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const Hadiths()),
                   );
                   break;
-
-                case 8:
+                  case 7:
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                      builder: (context) => const MiscellaneousAdhkar(),
-                    ),
+                    MaterialPageRoute(builder: (context) => const QuranView()),
                   );
                   break;
               }

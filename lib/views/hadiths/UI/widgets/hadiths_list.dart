@@ -24,7 +24,7 @@ class HadithsList extends StatelessWidget {
               CustomAppBar(
                 title: hadithsCubit.hadithTellerList[index].arabicName ?? '',
               ),
-PagesNumberList(hadithsCubit: hadithsCubit, index: index),
+              PagesNumberList(hadithsCubit: hadithsCubit, index: index),
               ListView.builder(
                 itemBuilder: (context, listindex) {
                   return AdhkarCard(
@@ -37,7 +37,6 @@ PagesNumberList(hadithsCubit: hadithsCubit, index: index),
                 physics: NeverScrollableScrollPhysics(),
               ),
               PagesNumberList(hadithsCubit: hadithsCubit, index: index),
-
             ],
           ),
         ),

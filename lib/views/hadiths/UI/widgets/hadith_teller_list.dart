@@ -22,7 +22,7 @@ class HadithTellerList extends StatelessWidget {
               onTap: () async {
                 await hadithsCubit.getHadiths(
                   hadithTeller: hadithsCubit.hadithTellerList[index].slug!,
-                  pageNum:1 ,
+                  pageNum: 1,
                 );
                 Navigator.push(
                   // ignore: use_build_context_synchronously
@@ -32,7 +32,6 @@ class HadithTellerList extends StatelessWidget {
                       return HadithsList(
                         hadithsCubit: hadithsCubit,
                         index: index,
-                       
                       );
                     },
                   ),

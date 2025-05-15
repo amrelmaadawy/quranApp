@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quranapp/core/app_color.dart';
 
 class AdhkarCard extends StatelessWidget {
   const AdhkarCard({super.key, required this.alzekr, required this.descrption});
@@ -26,6 +25,7 @@ class AdhkarCard extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
+                  textDirection: TextDirection.rtl,
                   textAlign: TextAlign.right,
                   alzekr,
                   style: TextStyle(fontSize: 17),
@@ -33,26 +33,26 @@ class AdhkarCard extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
-            child: Text(
-              style: TextStyle(fontSize: 17),
+          // Container(
+          //   decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
+          //   child: Text(
+          //     style: TextStyle(fontSize: 17),
 
-              textAlign: TextAlign.right,
-              descrption,
-            ),
-          ),
-          SizedBox(height: 15),
-          Center(
-            child: IconButton(
-              icon: Icon(
-                Icons.favorite,
-                size: 40,
-                color: AppColor.kprimryColor,
-              ),
-              onPressed: () {},
-            ),
-          ),
+          //     textAlign: TextAlign.right,
+          //     descrption,
+          //   ),
+          // ),
+          // SizedBox(height: 15),
+          // Center(
+          //   child: IconButton(
+          //     icon: Icon(
+          //       Icons.favorite,
+          //       size: 40,
+          //       color: AppColor.kprimryColor,
+          //     ),
+          //     onPressed: () {},
+          //   ),
+          // ),
         ],
       ),
     );

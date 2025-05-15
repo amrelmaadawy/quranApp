@@ -34,7 +34,18 @@ List<Worships> worships = [
     ),
     icon: Image.asset('assets/images/azkarelmassa.png'),
   ),
-
+  Worships(
+    id: 8,
+    text: Text(
+      'اذكار متنوعه',
+      style: TextStyle(
+        fontSize: 18,
+        color: AppColor.kprimryColor,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    icon: Image.asset('assets/images/randomazkar.png'),
+  ),
   Worships(
     id: 5,
     text: Text(
@@ -66,15 +77,20 @@ List<Worships> worships = [
   ),
 
   Worships(
-    id: 8,
+    id: 7,
     text: Text(
-      'اذكار متنوعه',
+      'القرآن الكريم ',
       style: TextStyle(
         fontSize: 18,
         color: AppColor.kprimryColor,
         fontWeight: FontWeight.bold,
       ),
     ),
-    icon: Image.asset('assets/images/randomazkar.png'),
+    icon: Image.asset(
+      'assets/images/quran.png',
+      color: AppColor.kprimryColor,
+      width: 50,
+      height: 50,
+    ),
   ),
 ];
