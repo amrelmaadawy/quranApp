@@ -6,12 +6,7 @@ class HadithTeller extends Equatable {
   final int? total;
   final String? arabicName;
 
-  const HadithTeller({
-    this.name,
-    this.slug,
-    this.total,
-    this.arabicName,
-  });
+  const HadithTeller({this.name, this.slug, this.total, this.arabicName});
 
   factory HadithTeller.fromJson(Map<String, dynamic> json) {
     final englishName = json['name'] as String?;
@@ -26,11 +21,11 @@ class HadithTeller extends Equatable {
   }
 
   Map<String, dynamic> toJson() => {
-        'name': name,
-        'slug': slug,
-        'total': total,
-        'arabicName': arabicName,
-      };
+    'name': name,
+    'slug': slug,
+    'total': total,
+    'arabicName': arabicName,
+  };
 
   @override
   List<Object?> get props => [name, slug, total, arabicName];
@@ -38,7 +33,7 @@ class HadithTeller extends Equatable {
 
 const Map<String, String> hadithNameTranslations = {
   "Abu Dawud": "أبو داود",
-  "Ahmad":  "أحمد بن حنبل",
+  "Ahmad": "أحمد بن حنبل",
   "Bukhari": "البخاري",
   "Darimi": "الدارمي",
   "Ibnu Majah": "ابن ماجه",

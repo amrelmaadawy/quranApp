@@ -1,13 +1,13 @@
 import 'package:equatable/equatable.dart';
 
-class HadithItem extends Equatable {
+class Item extends Equatable {
   final int? number;
   final String? arab;
   final String? id;
 
-  const HadithItem({this.number, this.arab, this.id});
+  const Item({this.number, this.arab, this.id});
 
-  factory HadithItem.fromJson(Map<String, dynamic> json) => HadithItem(
+  factory Item.fromJson(Map<String, dynamic> json) => Item(
     number: json['number'] as int?,
     arab: json['arab'] as String?,
     id: json['id'] as String?,

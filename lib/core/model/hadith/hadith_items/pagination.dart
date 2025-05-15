@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class HadithLength extends Equatable {
+class Pagination extends Equatable {
   final int? totalItems;
   final int? currentPage;
   final int? pageSize;
@@ -11,7 +11,7 @@ class HadithLength extends Equatable {
   final int? endIndex;
   final List<int>? pages;
 
-  const HadithLength({
+  const Pagination({
     this.totalItems,
     this.currentPage,
     this.pageSize,
@@ -23,7 +23,7 @@ class HadithLength extends Equatable {
     this.pages,
   });
 
-  factory HadithLength.fromJson(Map<String, dynamic> json) => HadithLength(
+  factory Pagination.fromJson(Map<String, dynamic> json) => Pagination(
     totalItems: json['totalItems'] as int?,
     currentPage: json['currentPage'] as int?,
     pageSize: json['pageSize'] as int?,
@@ -32,7 +32,7 @@ class HadithLength extends Equatable {
     endPage: json['endPage'] as int?,
     startIndex: json['startIndex'] as int?,
     endIndex: json['endIndex'] as int?,
-    pages: json['pages'] as List<int>?,
+    pages: (json['pages'] as List<dynamic>?)?.map((e) => e as int).toList(),
   );
 
   Map<String, dynamic> toJson() => {

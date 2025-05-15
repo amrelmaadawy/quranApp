@@ -9,6 +9,12 @@ abstract class HadithsState extends Equatable {
 
 class HadithsInitial extends HadithsState {}
 
+class GetHadithTellerLoading extends HadithsState {}
+
+class GetHadithTellerSuccess extends HadithsState {}
+
+class GetHadithTellerError extends HadithsState {}
+
 class GetHadithLoading extends HadithsState {}
 
 class GetHadithSuccess extends HadithsState {}
