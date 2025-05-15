@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quranapp/core/app_color.dart';
 import 'package:quranapp/core/components/adhkar_card.dart';
 import 'package:quranapp/core/components/custom_appbar_worships.dart';
 import 'package:quranapp/core/get_data.dart';
@@ -12,7 +13,7 @@ class SleepAdhkar extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(15.0),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -41,7 +42,12 @@ class SleepAdhkar extends StatelessWidget {
                         ],
                       );
                     } else {
-                      return Center(child: CircularProgressIndicator());
+                      return SizedBox(
+                        height:
+                            MediaQuery.of(context).size.height -
+                            100, 
+                        child: const Center(child: CircularProgressIndicator(color: AppColor.kprimryColor,)),
+                      );
                     }
                   },
                 ),

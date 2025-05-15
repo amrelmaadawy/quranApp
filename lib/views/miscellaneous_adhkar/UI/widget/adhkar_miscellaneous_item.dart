@@ -1,42 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:quranapp/core/components/adhkar_card.dart';
 import 'package:quranapp/core/components/custom_appbar_worships.dart';
-import 'package:quranapp/views/hadiths/UI/widgets/pages_number_list.dart';
-import 'package:quranapp/views/hadiths/logic/cubit/hadiths_cubit.dart';
+import 'package:quranapp/core/model/adhkar/adhkar.dart';
 
-class HadithsList extends StatelessWidget {
-  const HadithsList({
-    super.key,
-    required this.hadithsCubit,
-    required this.index,
-  });
+class AdhkarMiscellaneousItem extends StatelessWidget {
+  const AdhkarMiscellaneousItem({super.key, required this.items,required this.index});
 
-  final HadithsCubit hadithsCubit;
+  final List<Adhkar> items;
   final int index;
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
             children: [
-              CustomAppBar(
-                title: hadithsCubit.hadithTellerList[index].arabicName ?? '',
-              ),
-              PagesNumberList(hadithsCubit: hadithsCubit, index: index),
+              CustomAppBar(title: items[index].category ?? ''),
               ListView.builder(
                 itemBuilder: (context, listindex) {
                   return AdhkarCard(
-                    alzekr: hadithsCubit.hadithItems[listindex].arab ?? '',
+                    alzekr: items[index].array![listindex].text ?? '',
                     descrption: '',
                   );
                 },
-                itemCount: hadithsCubit.hadithItems.length,
+                itemCount: items[index].array!.length,
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
               ),
-              PagesNumberList(hadithsCubit: hadithsCubit, index: index),
             ],
           ),
         ),

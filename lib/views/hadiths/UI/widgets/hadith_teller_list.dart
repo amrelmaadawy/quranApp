@@ -20,27 +20,29 @@ class HadithTellerList extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: GestureDetector(
               onTap: () async {
-                await hadithsCubit.getHadiths(
-                  hadithTeller: hadithsCubit.hadithTellerList[index].slug!,
-                  pageNum: 1,
-                );
-                Navigator.push(
-                  // ignore: use_build_context_synchronously
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return HadithsList(
-                        hadithsCubit: hadithsCubit,
-                        index: index,
+                await hadithsCubit
+                    .getHadiths(
+                      hadithTeller: hadithsCubit.hadithTellerList[index].slug!,
+                      pageNum: 1,
+                    )
+                    .then((value) {
+                      Navigator.push(
+                        // ignore: use_build_context_synchronously
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return HadithsList(
+                              hadithsCubit: hadithsCubit,
+                              index: index,
+                            );
+                          },
+                        ),
                       );
-                    },
-                  ),
-                );
+                    });
               },
               child: Row(
                 children: [
                   Icon(Icons.arrow_back),
-
                   Spacer(),
                   Text(
                     hadithsCubit.hadithTellerList[index].arabicName ?? '',

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quranapp/core/app_color.dart';
 
 import 'package:quranapp/core/components/custom_appbar_worships.dart';
 import 'package:quranapp/views/hadiths/UI/widgets/hadith_teller_list.dart';
@@ -21,7 +22,14 @@ class Hadiths extends StatelessWidget {
                 listener: (context, state) {},
                 builder: (context, state) {
                   HadithsCubit hadithsCubit = context.read<HadithsCubit>();
-                  return Column(
+                  return state is GetHadithTellerLoading? SizedBox(
+                    height: MediaQuery.of(context).size.height - 100,
+                    child: const Center(
+                      child: CircularProgressIndicator(
+                        color: AppColor.kprimryColor,
+                      ),
+                    ),
+                  ): Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
