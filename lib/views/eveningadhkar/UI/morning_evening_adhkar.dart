@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quranapp/core/app_color.dart';
 import 'package:quranapp/core/components/adhkar_card.dart';
 import 'package:quranapp/core/components/custom_appbar_worships.dart';
 import 'package:quranapp/core/get_data.dart';
@@ -48,7 +49,7 @@ class _EveningAdhkarState extends State<EveningAdhkar> {
                 ),
               );
             } else {
-              return Center(child: CircularProgressIndicator());
+              return Center(child: CircularProgressIndicator(color: AppColor.kprimryColor,));
             }
           },
         ),

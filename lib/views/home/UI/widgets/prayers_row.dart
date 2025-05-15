@@ -23,7 +23,7 @@ class _PrayersRowState extends State<PrayersRow> {
             name: 'العشاء',
             icon: Image.asset(
               'assets/images/isha.png',
-              color: AppColor.kunselectedicon,
+              color: AppColor.kprimryColor,
             ),
             time:
                 state is GetPrayTimeLoading
@@ -36,7 +36,7 @@ class _PrayersRowState extends State<PrayersRow> {
             name: 'المغرب',
             icon: Image.asset(
               'assets/images/maghrib.png',
-              color: AppColor.kunselectedicon,
+              color: AppColor.kprimryColor,
             ),
             time:
                 state is GetPrayTimeLoading
@@ -49,7 +49,7 @@ class _PrayersRowState extends State<PrayersRow> {
             name: 'العصر',
             icon: Image.asset(
               'assets/images/elasr.png',
-              color: AppColor.kunselectedicon,
+              color: AppColor.kprimryColor,
             ),
             time:
                 state is GetPrayTimeLoading
@@ -62,7 +62,7 @@ class _PrayersRowState extends State<PrayersRow> {
             name: 'الظهر',
             icon: Image.asset(
               'assets/images/dhur1.png',
-              color: AppColor.kunselectedicon,
+              color: AppColor.kprimryColor,
             ),
             time:
                 state is GetPrayTimeLoading
@@ -75,7 +75,7 @@ class _PrayersRowState extends State<PrayersRow> {
             name: 'الشروق',
             icon: Image.asset(
               'assets/images/sunrise.png',
-              color: AppColor.kunselectedicon,
+              color: AppColor.kprimryColor,
             ),
             time:
                 state is GetPrayTimeLoading
@@ -88,7 +88,7 @@ class _PrayersRowState extends State<PrayersRow> {
             name: 'الفجر',
             icon: Image.asset(
               'assets/images/fajr.png',
-              color: AppColor.kunselectedicon,
+              color: AppColor.kprimryColor,
             ),
             time:
                 state is GetPrayTimeLoading

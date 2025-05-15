@@ -23,10 +23,10 @@ class QuranCubit extends Cubit<QuranState> {
     }
   }
 
-  Future<void> getAyahs() async {
+  Future<void> getAyahs({required int surhIndex}) async {
     emit(GetAyahsLoading());
     try {
-      final response = await _quranServices.getData('surah/1');
+      final response = await _quranServices.getData('surah/$surhIndex');
       final List allSurhList = response.data['data']['ayahs'];
 
       ayahsList =
@@ -35,11 +35,9 @@ class QuranCubit extends Cubit<QuranState> {
                 (ayahJson) => Ayah.fromJson(ayahJson as Map<String, dynamic>),
               )
               .toList();
-      print(ayahsList[0].text);
       emit(GetAyahsSuccess());
     } catch (e) {
       emit(GetAyahsError());
-      print(e);
     }
   }
 }

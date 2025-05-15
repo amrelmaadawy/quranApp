@@ -5,7 +5,7 @@ import 'package:quranapp/core/Services/timing_services.dart';
 import 'package:quranapp/core/model/prayers_time/gregorian.dart';
 import 'package:quranapp/core/model/prayers_time/hijri.dart';
 import 'package:quranapp/core/model/prayers_time/timings.dart';
-import 'package:quranapp/views/prayerstime/Logic/notificatoin_service.dart';
+import 'package:quranapp/core/Services/notificatoin_service.dart';
 
 part 'pray_time_state.dart';
 
