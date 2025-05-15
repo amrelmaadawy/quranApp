@@ -44,7 +44,9 @@ class _HomeAppBarState extends State<HomeAppBar> {
                         ),
                       ),
                       Text(
-                        '${snapshot.data}',
+                       '${snapshot.data}' == 'Location services are disabled.'
+                            ? 'لا يوجد موقع'
+                            : '${snapshot.data}',
                         style: TextStyle(
                           color: AppColor.kprimryColor,
                           fontSize: 20,

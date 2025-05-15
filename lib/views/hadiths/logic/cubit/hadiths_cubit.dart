@@ -42,15 +42,12 @@ class HadithsCubit extends Cubit<HadithsState> {
         'hadith/$hadithTeller?page=$pageNum&limit=100',
       );
 
-      // Parse the full response into HadithItems
       hadithData = HadithItems.fromJson(response.data);
 
-      // Get the list of individual hadiths from the 'items' field
       hadithItems = hadithData?.items ?? [];
 
       emit(GetHadithSuccess());
     } catch (e) {
-      print('Error fetching hadiths: $e');
       emit(GetHadithError());
     }
   }

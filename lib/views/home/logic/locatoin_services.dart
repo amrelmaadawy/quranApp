@@ -26,12 +26,11 @@ class LocationService {
       return 'Location permissions are permanently denied.';
     }
 
-    // Get current position
     Position position = await Geolocator.getCurrentPosition(
+      // ignore: deprecated_member_use
       desiredAccuracy: LocationAccuracy.high,
     );
 
-    // Convert to human-readable address
     List<Placemark> placemarks = await placemarkFromCoordinates(
       position.latitude,
       position.longitude,

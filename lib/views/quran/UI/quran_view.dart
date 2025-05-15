@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quranapp/core/Services/connection_services.dart';
 import 'package:quranapp/core/app_color.dart';
-import 'package:quranapp/core/components/custom_appbar_worships.dart';
-import 'package:quranapp/views/quran/Logic/quran_cubit.dart';
-import 'package:quranapp/views/quran/UI/widgets/surh_card.dart';
+import 'package:quranapp/views/quran/UI/widgets/main_quran_view.dart';
 
 class QuranView extends StatelessWidget {
   const QuranView({super.key});
@@ -11,43 +9,28 @@ class QuranView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocProvider(
-        create: (context) => QuranCubit()..getSurhsName(),
-        child: BlocConsumer<QuranCubit, QuranState>(
-          listener: (context, state) {},
-          builder: (context, state) {
-            QuranCubit quranCubit = context.read<QuranCubit>();
-
-            return state is GetSurhsNameLoading
-                ? SizedBox(
-                  height: MediaQuery.of(context).size.height - 100,
-                  child: const Center(
-                    child: CircularProgressIndicator(
-                      color: AppColor.kprimryColor,
-                    ),
-                  ),
-                )
-                : SingleChildScrollView(
-                  child: SafeArea(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        CustomAppBar(title: 'القرآن الكريم '),
-                        ListView.builder(
-                          itemBuilder: (context, index) {
-                            return SurhCard(quranCubit: quranCubit,index:index);
-                          },
-                          itemCount: quranCubit.surhsNameList.length,
-                          shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-          },
-        ),
+      body: FutureBuilder<bool>(
+        future: ConnectionServices.checkConnection(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Scaffold(
+              body: Center(
+                child: CircularProgressIndicator(color: AppColor.kprimryColor),
+              ),
+            );
+          } else if (snapshot.hasError || !snapshot.data!) {
+            return const Scaffold(
+              body: Center(
+                child: Text(
+                  'لا يوجد اتصال بالإنترنت، من فضلك تأكد من اتصالك بالشبكة',
+                  style: TextStyle(fontSize: 17),
+                ),
+              ),
+            );
+          } else {
+            return const MainQuranView();
+          }
+        },
       ),
     );
   }

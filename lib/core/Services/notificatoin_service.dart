@@ -14,9 +14,7 @@ class NotificationService {
     );
 
     tz.initializeTimeZones();
-    // if (await Permission.notification.isDenied) {
-    //     await Permission.notification.request();
-    //   }
+   
   }
 
   static Future<void> schiduleNotification(
@@ -32,13 +30,10 @@ class NotificationService {
       priority: Priority.high,
       playSound: true,
       sound: RawResourceAndroidNotificationSound(
-        'alarm',
+        'adhan',
       ), // Custom sound for Android
       fullScreenIntent: true,
     );
-    // final iosDetails = DarwinNotificationDetails(
-    //   sound: 'alarm', // Custom sound for iOS
-    // );
     final notificationDetails = NotificationDetails(android: androidDetails);
 
     final scheduledTime = tz.TZDateTime.from(dateTime, tz.local);

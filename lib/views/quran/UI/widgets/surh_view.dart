@@ -17,40 +17,42 @@ class AyahsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Column(
-            children: [
-              CustomAppBar(title: quranCubit.surhsNameList[index]),
-
-              Card(
-                margin: const EdgeInsets.all(5),
-                color: Colors.lightBlue.shade50,
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                ),
-                child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.lightBlue.shade50,
-
-                    borderRadius: BorderRadius.circular(15),
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Column(
+              children: [
+                CustomAppBar(title: quranCubit.surhsNameList[index]),
+          
+                Card(
+                  margin: const EdgeInsets.all(5),
+                  color: Colors.lightBlue.shade50,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Directionality(
-                      // makes text RTL
-                      textDirection: TextDirection.rtl,
-                      child: Text(
-                        fullSurahText,
-                        textAlign: TextAlign.right,
-                        style: const TextStyle(fontSize: 22, height: 2),
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.lightBlue.shade50,
+          
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Directionality(
+                        // makes text RTL
+                        textDirection: TextDirection.rtl,
+                        child: Text(
+                          fullSurahText,
+                          textAlign: TextAlign.right,
+                          style: const TextStyle(fontSize: 22, height: 2),
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
