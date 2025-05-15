@@ -9,6 +9,14 @@ abstract class QuranState extends Equatable {
 
 class QuranInitial extends QuranState {}
 
-class GetSurhsNameLoading extends QuranState{}
-class GetSurhsNameSuccess extends QuranState{}
-class GetSurhsNameError extends QuranState{}
+class GetSurhsNameLoading extends QuranState {}
+
+class GetSurhsNameSuccess extends QuranState {}
+
+class GetSurhsNameError extends QuranState {}
+
+class GetAyahsLoading extends QuranState {}
+
+class GetAyahsSuccess extends QuranState {}
+
+class GetAyahsError extends QuranState {}
